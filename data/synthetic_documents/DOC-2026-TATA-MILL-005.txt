@@ -1,0 +1,36 @@
+================================================================================
+SEALAND LOGISTICS GROUP - SPECIALIZED PROJECT CARGO DIVISION
+HEAVY HAUL CONSIGNMENT WAYBILL & PHYSICAL SURVEY SPECIFICATION
+DOCUMENT REF: DOC-2026-TATA-MILL-005
+================================================================================
+CONSIGNMENT TITLE: Industrial Steel Plant Machinery Waybill & Transit Certificate
+SURVEY REFERENCE : SRV-INCCU-JAM-2026-TATA-05
+DATE ISSUED      : 04-Nov-2026 14:44:28 UTC
+CONTRACTOR       : Sealand Logistics Group - Eastern Corridor Division
+
+[1. SHIPPER DETAILS]
+Company Name : SMS group India Private Limited
+Facility     : Metals Technology Engineering Center
+Location     : Kolkata, West Bengal
+
+[2. CONSIGNEE & DELIVERY SITE]
+Company Name : Tata Steel Limited - Jamshedpur Works
+Project Site : LD2 & Slab Caster Modernization Plant, Adityapur
+Destination  : Jamshedpur Tata Steel Complex, Jharkhand
+
+[3. CARGO PHYSICAL DIMENSIONS & SPECIFICATIONS]
+Commodity Description : Cast Steel Reversing Roughing Stand Housing Frame
+Packaging Type        : Direct Well-Deck Hydraulic Modular Low-Bed
+Net Cargo Weight      : 70.0 Metric Tons (MT)
+Overall Length        : 18.5 meters
+Consignment Width     : 3.5 meters
+Loaded Vehicle Height : 4.4 meters
+Modular Axle Lines    : 8 Hydraulic Axle Lines
+Port of Departure     : Kolkata Port (Netaji Subhas Dock Berth 5)
+Destination Hub       : Jamshedpur Tata Steel Complex (JH)
+
+[4. STATUTORY DECLARATION & SAFETY COMPLIANCE]
+- Compliance with Indian Roads Congress Code IRC:SP:35 (Heavy Multi-Axle Trailers).
+- Ministry of Road Transport & Highways (MoRTH) Central Portal Filing Mandatory.
+- Escort convoy vehicles with revolving amber beacons must be pre-arranged.
+================================================================================

@@ -7,7 +7,7 @@ import json
 import urllib.request
 import urllib.error
 
-N8N_BASE_URL = os.environ.get("N8N_BASE_URL", "https://ubuntu.arindam818.cloud/api/v1")
+N8N_BASE_URL = os.environ.get("N8N_BASE_URL", "http://localhost:5678/api/v1")
 N8N_API_KEY = os.environ.get("N8N_API_KEY", "")
 if not N8N_API_KEY:
     # Try reading from environment or prompt

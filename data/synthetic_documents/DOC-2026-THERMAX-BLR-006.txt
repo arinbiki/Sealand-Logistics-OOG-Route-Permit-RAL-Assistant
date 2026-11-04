@@ -1,0 +1,36 @@
+================================================================================
+SEALAND LOGISTICS GROUP - SPECIALIZED PROJECT CARGO DIVISION
+HEAVY HAUL CONSIGNMENT WAYBILL & PHYSICAL SURVEY SPECIFICATION
+DOCUMENT REF: DOC-2026-THERMAX-BLR-006
+================================================================================
+CONSIGNMENT TITLE: Boiler Drum Heavy Haul Transport Order & Route Survey Assessment
+SURVEY REFERENCE : SRV-INPRT-JHS-2026-THRX-06
+DATE ISSUED      : 04-Nov-2026 14:44:28 UTC
+CONTRACTOR       : Sealand Logistics Group - Odisha Project Operations
+
+[1. SHIPPER DETAILS]
+Company Name : Thermax Limited - Boiler & Heater Division
+Facility     : Chinchwad Works
+Location     : Pune, Maharashtra
+
+[2. CONSIGNEE & DELIVERY SITE]
+Company Name : Vedanta Limited - Aluminium & Power Division
+Project Site : Jharsuguda Smelter Plant Power Block 3
+Destination  : Jharsuguda Industrial Hub, Odisha
+
+[3. CARGO PHYSICAL DIMENSIONS & SPECIFICATIONS]
+Commodity Description : Subcritical Power Boiler Steam Drum with Internal Cyclone Separators
+Packaging Type        : Dual-Saddle Mounting on 12 Hydraulic Axle Lines
+Net Cargo Weight      : 110.0 Metric Tons (MT)
+Overall Length        : 26.0 meters
+Consignment Width     : 4.1 meters
+Loaded Vehicle Height : 4.95 meters
+Modular Axle Lines    : 12 Hydraulic Axle Lines
+Port of Departure     : Paradip Port (PICT Multi-Purpose Terminal)
+Destination Hub       : Jharsuguda Industrial Hub (OD)
+
+[4. STATUTORY DECLARATION & SAFETY COMPLIANCE]
+- Compliance with Indian Roads Congress Code IRC:SP:35 (Heavy Multi-Axle Trailers).
+- Ministry of Road Transport & Highways (MoRTH) Central Portal Filing Mandatory.
+- Escort convoy vehicles with revolving amber beacons must be pre-arranged.
+================================================================================

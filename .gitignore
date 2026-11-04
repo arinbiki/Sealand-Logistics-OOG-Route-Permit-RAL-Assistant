@@ -4,6 +4,8 @@
 *.pem
 *.key
 *.token
+temp_*/
+*.log
 
 # Python Cache & Virtual Environments
 __pycache__/
@@ -47,3 +49,4 @@ build/
 *~
 .DS_Store
 Thumbs.db
+

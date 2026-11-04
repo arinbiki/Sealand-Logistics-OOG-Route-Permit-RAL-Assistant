@@ -99,3 +99,4 @@ def run_10k_benchmark(total_queries: int = 10000):
 
 if __name__ == "__main__":
     run_10k_benchmark(10000)
+

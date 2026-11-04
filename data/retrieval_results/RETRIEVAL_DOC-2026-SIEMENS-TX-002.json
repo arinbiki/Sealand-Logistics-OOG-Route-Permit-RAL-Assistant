@@ -1,0 +1,175 @@
+{
+  "survey_id": "SRV-INMAA-BLR-2026-SIEM-02",
+  "client_id": "SEALAND_SYNTHETIC_INGESTION_SUITE",
+  "timestamp": "2026-11-04T14:44:28.090881+00:00",
+  "origin": {
+    "query": "Chennai Port (Citpl Container & Heavy Terminal)",
+    "node_id": "PORT_CODE_INMAA",
+    "node_name": "Chennai Port",
+    "state": "TN",
+    "lat": 13.0827,
+    "lon": 80.2707
+  },
+  "destination": {
+    "query": "Bangalore Nelamangala Hub (KA)",
+    "node_id": "HUB_BANGALORE",
+    "node_name": "Bangalore Nelamangala Freight Hub",
+    "state": "KA",
+    "lat": 12.9716,
+    "lon": 77.5946
+  },
+  "cargo_specs": {
+    "weight_mt": 85.0,
+    "height_m": 4.65,
+    "width_m": 3.8,
+    "length_m": 22.0,
+    "axle_count": 10
+  },
+  "axle_engineering_analysis": {
+    "cargo_weight_mt": 85.0,
+    "puller_tare_mt": 12.0,
+    "trailer_tare_mt": 35.0,
+    "total_gvw_mt": 132.0,
+    "axle_count": 10,
+    "axle_load_mt": 13.2,
+    "permissible_axle_load_mt": 13.5,
+    "axle_overloaded": false,
+    "recommended_min_axle_count": 10,
+    "axle_loading_safety_margin_pct": 2.22
+  },
+  "route_summary": {
+    "total_distance_km": 345.0,
+    "estimated_transit_hours": 11.5,
+    "estimated_transit_days": 1.9,
+    "total_toll_plazas": 4,
+    "ghat_sections_count": 0,
+    "traversed_states": [
+      "KA",
+      "TN"
+    ],
+    "node_count": 2,
+    "corridor_path": "Chennai Port -> Bangalore Nelamangala Freight Hub"
+  },
+  "corridor_segments": [
+    {
+      "from_node": "PORT_CODE_INMAA",
+      "to_node": "HUB_BANGALORE",
+      "segment_id": "SEG-MAA-BLR-NH48",
+      "highway": "NH-48",
+      "distance_km": 345.0,
+      "ghat": false,
+      "tolls": 4
+    }
+  ],
+  "map_coordinates": [
+    {
+      "node_id": "PORT_CODE_INMAA",
+      "node_name": "Chennai Port",
+      "lat": 13.0827,
+      "lon": 80.2707,
+      "state": "TN"
+    },
+    {
+      "node_id": "HUB_BANGALORE",
+      "node_name": "Bangalore Nelamangala Freight Hub",
+      "lat": 12.9716,
+      "lon": 77.5946,
+      "state": "KA"
+    }
+  ],
+  "bottlenecks": {
+    "bypasses_applied": [
+      {
+        "bridge_id": "BRG-AP-NAGAVALI-01",
+        "bridge_name": "Nagavali River Arch Bridge",
+        "segment_id": "SEG-VTZ-JAG-NH30",
+        "breach": "Weight 85.0MT > Limit 65.0MT",
+        "bypass_route_id": "SEG-VTZ-SAM-NH26",
+        "bypass_penalty_km": 140.0,
+        "notes": "Arch load limit strictly enforced by AP PWD. Loads > 65MT must detour via Sambalpur NH-26."
+      },
+      {
+        "bridge_id": "BRG-OD-MAHANADI-02",
+        "bridge_name": "Mahanadi Rail-Cum-Road Truss Bridge",
+        "segment_id": "SEG-PRT-SAM-NH53",
+        "breach": "Weight 85.0MT > Limit 80.0MT",
+        "bypass_route_id": "BYPASS-SAMBALPUR-RING",
+        "bypass_penalty_km": 45.0,
+        "notes": "Weight strictly capped at 80MT. Heavier industrial consignments must use NH-49 via Jharsuguda."
+      },
+      {
+        "bridge_id": "BRG-WB-RUPNARAYAN-01",
+        "bridge_name": "Rupnarayan River Kolaghat Truss Bridge",
+        "segment_id": "SEG-CCU-BLS-NH16",
+        "breach": "Weight 85.0MT > Limit 75.0MT",
+        "bypass_route_id": "BYPASS-KHARAGPUR-NH16",
+        "bypass_penalty_km": 52.0,
+        "notes": "Severe corrosion monitoring. Cargo > 75MT must bypass via Kharagpur heavy axle corridor."
+      }
+    ],
+    "pruned_segments_count": 0,
+    "pruned_details": []
+  },
+  "compliance_matrix": {
+    "permits_checklist": [
+      {
+        "jurisdiction": "CENTRAL_MORTH",
+        "authority": "Ministry of Road Transport & Highways (MoRTH)",
+        "permit_code": "MORTH-ONLINE-SPECIAL-PERMIT",
+        "statutory_fee_inr": 21210.0,
+        "sla_days": 5,
+        "portal_url": "https://morth-owdc.nic.in/",
+        "mandatory": true
+      },
+      {
+        "jurisdiction": "STATE_KA",
+        "authority": "Karnataka Transport Department",
+        "permit_code": "KA-RTO-HEAVY-HAUL",
+        "statutory_fee_inr": 11456.15,
+        "sla_days": 4,
+        "portal_url": "https://transport.karnataka.gov.in/heavyloads",
+        "mandatory": true
+      },
+      {
+        "jurisdiction": "STATE_TN",
+        "authority": "Tamil Nadu State Transport Authority",
+        "permit_code": "TN-TRANSPORT-SPECIAL-PERMIT",
+        "statutory_fee_inr": 10269.85,
+        "sla_days": 4,
+        "portal_url": "https://tnsta.gov.in/odc",
+        "mandatory": true
+      }
+    ],
+    "total_statutory_fee_inr": 42936.0,
+    "aggregate_survey_sla_days": 7,
+    "escort_mandates": [
+      "State of KA: Mandatory 2-vehicle convoy (Front pilot with amber strobe + rear escort) required by Karnataka Transport Department.",
+      "State of TN: Mandatory 2-vehicle convoy (Front pilot with amber strobe + rear escort) required by Tamil Nadu State Transport Authority."
+    ],
+    "night_travel_restrictions": [
+      "State of KA: Movement STRICTLY PROHIBITED between 20:00 and 06:00 hrs on all corridors."
+    ],
+    "requires_police_convoy": false
+  },
+  "risk_evaluation": {
+    "risk_score": 60,
+    "status": "APPROVED_AUTO_PERMIT",
+    "recommended_action": "CLEARANCE_GRANTED",
+    "summary": "Deterministic constraints verified. Safe for automated permit filing and corridor dispatch.",
+    "risk_factors": [
+      "Heavy Lift (80-120MT): Structural girder verification required (+15)",
+      "Sub-optimal Axle Line Margin (13.2MT/axle) (+10)",
+      "Structural Bottleneck Detours (3 bridges bypassed) (+20)"
+    ]
+  },
+  "status": "APPROVED_AUTO_PERMIT",
+  "risk_score": 60,
+  "requires_human_dispatcher_waiver": false,
+  "execution_metadata": {
+    "engine": "Sealand-RAL-v2.1",
+    "deterministic_solver": "NetworkX Dijkstra + RapidFuzz Trigram",
+    "execution_duration_ms": 4.56,
+    "zero_llm_guarantee": true,
+    "db_persisted": false
+  }
+}

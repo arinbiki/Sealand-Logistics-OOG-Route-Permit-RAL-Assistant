@@ -1,0 +1,29 @@
+{
+  "document_id": "DOC-2026-SIEMENS-TX-002",
+  "title": "Special Haulage Dispatch Dossier & Axle Loading Certificate",
+  "shipper": {
+    "company_name": "Siemens Energy India Limited",
+    "facility": "Transformer & Grid Systems Manufacturing Works",
+    "city": "Thane",
+    "state": "Maharashtra"
+  },
+  "consignee": {
+    "company_name": "Power Grid Corporation of India Limited (PGCIL)",
+    "site": "400/220kV Nelamangala Substation Complex",
+    "delivery_hub": "Bangalore Nelamangala Hub",
+    "state": "Karnataka"
+  },
+  "cargo_manifest": {
+    "commodity": "400kV Single-Phase Generator Step-Up Autotransformer with Bushings",
+    "package_type": "Hermetically Sealed Tank on Heavy Lowbed Modular Trailer",
+    "net_cargo_weight_mt": 85.0,
+    "overall_length_m": 22.0,
+    "overall_width_m": 3.8,
+    "loaded_height_m": 4.65,
+    "axle_lines_demanded": 10,
+    "origin_port": "Chennai Port (Citpl Container & Heavy Terminal)",
+    "destination_location": "Bangalore Nelamangala Hub (KA)"
+  },
+  "transport_contractor": "Sealand Logistics Group - Heavy Engineering Logistics",
+  "survey_reference": "SRV-INMAA-BLR-2026-SIEM-02"
+}

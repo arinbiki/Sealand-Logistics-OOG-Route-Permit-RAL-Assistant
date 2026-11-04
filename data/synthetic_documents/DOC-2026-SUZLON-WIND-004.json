@@ -1,0 +1,29 @@
+{
+  "document_id": "DOC-2026-SUZLON-WIND-004",
+  "title": "Offshore Renewable Energy Super-Wide Nacelle Bill of Lading",
+  "shipper": {
+    "company_name": "Suzlon Energy Limited",
+    "facility": "Rotor Blade & Nacelle Engineering Hub",
+    "city": "Daman",
+    "state": "Gujarat"
+  },
+  "consignee": {
+    "company_name": "Gujarat State Electricity Corporation Limited (GSECL)",
+    "site": "Sanand Renewable Energy Park & Power Grid Substation",
+    "delivery_hub": "Ahmedabad Sanand Hub",
+    "state": "Gujarat"
+  },
+  "cargo_manifest": {
+    "commodity": "3.3MW Offshore Wind Turbine Generator Nacelle & Integrated Hub",
+    "package_type": "Reinforced Bolster Bed on 16-Axle Hydraulic Modular Carrier",
+    "net_cargo_weight_mt": 140.0,
+    "overall_length_m": 32.0,
+    "overall_width_m": 4.8,
+    "loaded_height_m": 5.4,
+    "axle_lines_demanded": 16,
+    "origin_port": "Mundra Port (Adani Ports Heavy Multi-Purpose Terminal)",
+    "destination_location": "Ahmedabad Sanand Hub (GJ)"
+  },
+  "transport_contractor": "Sealand Logistics Group - Gujarat Corridor Operations",
+  "survey_reference": "SRV-INMUN-AMD-2026-SUZL-04"
+}

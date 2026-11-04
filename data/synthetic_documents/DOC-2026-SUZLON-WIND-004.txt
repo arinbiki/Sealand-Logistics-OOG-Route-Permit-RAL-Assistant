@@ -1,0 +1,36 @@
+================================================================================
+SEALAND LOGISTICS GROUP - SPECIALIZED PROJECT CARGO DIVISION
+HEAVY HAUL CONSIGNMENT WAYBILL & PHYSICAL SURVEY SPECIFICATION
+DOCUMENT REF: DOC-2026-SUZLON-WIND-004
+================================================================================
+CONSIGNMENT TITLE: Offshore Renewable Energy Super-Wide Nacelle Bill of Lading
+SURVEY REFERENCE : SRV-INMUN-AMD-2026-SUZL-04
+DATE ISSUED      : 04-Nov-2026 14:44:28 UTC
+CONTRACTOR       : Sealand Logistics Group - Gujarat Corridor Operations
+
+[1. SHIPPER DETAILS]
+Company Name : Suzlon Energy Limited
+Facility     : Rotor Blade & Nacelle Engineering Hub
+Location     : Daman, Gujarat
+
+[2. CONSIGNEE & DELIVERY SITE]
+Company Name : Gujarat State Electricity Corporation Limited (GSECL)
+Project Site : Sanand Renewable Energy Park & Power Grid Substation
+Destination  : Ahmedabad Sanand Hub, Gujarat
+
+[3. CARGO PHYSICAL DIMENSIONS & SPECIFICATIONS]
+Commodity Description : 3.3MW Offshore Wind Turbine Generator Nacelle & Integrated Hub
+Packaging Type        : Reinforced Bolster Bed on 16-Axle Hydraulic Modular Carrier
+Net Cargo Weight      : 140.0 Metric Tons (MT)
+Overall Length        : 32.0 meters
+Consignment Width     : 4.8 meters
+Loaded Vehicle Height : 5.4 meters
+Modular Axle Lines    : 16 Hydraulic Axle Lines
+Port of Departure     : Mundra Port (Adani Ports Heavy Multi-Purpose Terminal)
+Destination Hub       : Ahmedabad Sanand Hub (GJ)
+
+[4. STATUTORY DECLARATION & SAFETY COMPLIANCE]
+- Compliance with Indian Roads Congress Code IRC:SP:35 (Heavy Multi-Axle Trailers).
+- Ministry of Road Transport & Highways (MoRTH) Central Portal Filing Mandatory.
+- Escort convoy vehicles with revolving amber beacons must be pre-arranged.
+================================================================================

@@ -1,0 +1,36 @@
+================================================================================
+SEALAND LOGISTICS GROUP - SPECIALIZED PROJECT CARGO DIVISION
+HEAVY HAUL CONSIGNMENT WAYBILL & PHYSICAL SURVEY SPECIFICATION
+DOCUMENT REF: DOC-2026-SIEMENS-TX-002
+================================================================================
+CONSIGNMENT TITLE: Special Haulage Dispatch Dossier & Axle Loading Certificate
+SURVEY REFERENCE : SRV-INMAA-BLR-2026-SIEM-02
+DATE ISSUED      : 04-Nov-2026 14:44:28 UTC
+CONTRACTOR       : Sealand Logistics Group - Heavy Engineering Logistics
+
+[1. SHIPPER DETAILS]
+Company Name : Siemens Energy India Limited
+Facility     : Transformer & Grid Systems Manufacturing Works
+Location     : Thane, Maharashtra
+
+[2. CONSIGNEE & DELIVERY SITE]
+Company Name : Power Grid Corporation of India Limited (PGCIL)
+Project Site : 400/220kV Nelamangala Substation Complex
+Destination  : Bangalore Nelamangala Hub, Karnataka
+
+[3. CARGO PHYSICAL DIMENSIONS & SPECIFICATIONS]
+Commodity Description : 400kV Single-Phase Generator Step-Up Autotransformer with Bushings
+Packaging Type        : Hermetically Sealed Tank on Heavy Lowbed Modular Trailer
+Net Cargo Weight      : 85.0 Metric Tons (MT)
+Overall Length        : 22.0 meters
+Consignment Width     : 3.8 meters
+Loaded Vehicle Height : 4.65 meters
+Modular Axle Lines    : 10 Hydraulic Axle Lines
+Port of Departure     : Chennai Port (Citpl Container & Heavy Terminal)
+Destination Hub       : Bangalore Nelamangala Hub (KA)
+
+[4. STATUTORY DECLARATION & SAFETY COMPLIANCE]
+- Compliance with Indian Roads Congress Code IRC:SP:35 (Heavy Multi-Axle Trailers).
+- Ministry of Road Transport & Highways (MoRTH) Central Portal Filing Mandatory.
+- Escort convoy vehicles with revolving amber beacons must be pre-arranged.
+================================================================================

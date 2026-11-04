@@ -1,0 +1,257 @@
+{
+  "survey_id": "SRV-INVTZ-RPR-2026-BHEL-01",
+  "client_id": "SEALAND_SYNTHETIC_INGESTION_SUITE",
+  "timestamp": "2026-11-04T14:44:28.069628+00:00",
+  "origin": {
+    "query": "Visakhapatnam Port (VPT Berth 4)",
+    "node_id": "PORT_CODE_INVTZ",
+    "node_name": "Visakhapatnam Port (Vizag)",
+    "state": "AP",
+    "lat": 17.6868,
+    "lon": 83.2185
+  },
+  "destination": {
+    "query": "Raipur Logistics Hub (CG)",
+    "node_id": "HUB_RAIPUR",
+    "node_name": "Raipur Logistics Park",
+    "state": "CG",
+    "lat": 21.2514,
+    "lon": 81.6296
+  },
+  "cargo_specs": {
+    "weight_mt": 120.0,
+    "height_m": 5.25,
+    "width_m": 4.6,
+    "length_m": 28.0,
+    "axle_count": 14
+  },
+  "axle_engineering_analysis": {
+    "cargo_weight_mt": 120.0,
+    "puller_tare_mt": 12.0,
+    "trailer_tare_mt": 49.0,
+    "total_gvw_mt": 181.0,
+    "axle_count": 14,
+    "axle_load_mt": 12.93,
+    "permissible_axle_load_mt": 13.5,
+    "axle_overloaded": false,
+    "recommended_min_axle_count": 14,
+    "axle_loading_safety_margin_pct": 4.23
+  },
+  "route_summary": {
+    "total_distance_km": 730.0,
+    "estimated_transit_hours": 26.64,
+    "estimated_transit_days": 4.1,
+    "total_toll_plazas": 10,
+    "ghat_sections_count": 0,
+    "traversed_states": [
+      "AP",
+      "CG",
+      "OD"
+    ],
+    "node_count": 3,
+    "corridor_path": "Visakhapatnam Port (Vizag) -> Sambalpur NH-53 Junction -> Raipur Logistics Park"
+  },
+  "corridor_segments": [
+    {
+      "from_node": "PORT_CODE_INVTZ",
+      "to_node": "JUNC_SAMBALPUR",
+      "segment_id": "SEG-VTZ-SAM-NH26",
+      "highway": "NH-26",
+      "distance_km": 450.0,
+      "ghat": false,
+      "tolls": 6
+    },
+    {
+      "from_node": "JUNC_SAMBALPUR",
+      "to_node": "HUB_RAIPUR",
+      "segment_id": "SEG-SAM-RPR-NH53",
+      "highway": "NH-53",
+      "distance_km": 280.0,
+      "ghat": false,
+      "tolls": 4
+    }
+  ],
+  "map_coordinates": [
+    {
+      "node_id": "PORT_CODE_INVTZ",
+      "node_name": "Visakhapatnam Port (Vizag)",
+      "lat": 17.6868,
+      "lon": 83.2185,
+      "state": "AP"
+    },
+    {
+      "node_id": "JUNC_SAMBALPUR",
+      "node_name": "Sambalpur NH-53 Junction",
+      "lat": 21.4669,
+      "lon": 83.9812,
+      "state": "OD"
+    },
+    {
+      "node_id": "HUB_RAIPUR",
+      "node_name": "Raipur Logistics Park",
+      "lat": 21.2514,
+      "lon": 81.6296,
+      "state": "CG"
+    }
+  ],
+  "bottlenecks": {
+    "bypasses_applied": [
+      {
+        "bridge_id": "BRG-AP-NAGAVALI-01",
+        "bridge_name": "Nagavali River Arch Bridge",
+        "segment_id": "SEG-VTZ-JAG-NH30",
+        "breach": "Weight 120.0MT > Limit 65.0MT & Height 5.25m > Clearance 5.2m",
+        "bypass_route_id": "SEG-VTZ-SAM-NH26",
+        "bypass_penalty_km": 140.0,
+        "notes": "Arch load limit strictly enforced by AP PWD. Loads > 65MT must detour via Sambalpur NH-26."
+      },
+      {
+        "bridge_id": "BRG-TS-SURYAPET-HT-01",
+        "bridge_name": "Suryapet High-Tension Transmission Crossing",
+        "segment_id": "SEG-SUR-HYD-NH65",
+        "breach": "Height 5.25m > Clearance 5.2m",
+        "bypass_route_id": "BYPASS-SURYAPET-LOCAL",
+        "bypass_penalty_km": 12.0,
+        "notes": "400kV PowerGrid line SAG risk in summer. Loads > 5.10m require line power shut-down permit."
+      },
+      {
+        "bridge_id": "BRG-OD-MAHANADI-02",
+        "bridge_name": "Mahanadi Rail-Cum-Road Truss Bridge",
+        "segment_id": "SEG-PRT-SAM-NH53",
+        "breach": "Weight 120.0MT > Limit 80.0MT & Height 5.25m > Clearance 4.9m",
+        "bypass_route_id": "BYPASS-SAMBALPUR-RING",
+        "bypass_penalty_km": 45.0,
+        "notes": "Weight strictly capped at 80MT. Heavier industrial consignments must use NH-49 via Jharsuguda."
+      },
+      {
+        "bridge_id": "BRG-WB-RUPNARAYAN-01",
+        "bridge_name": "Rupnarayan River Kolaghat Truss Bridge",
+        "segment_id": "SEG-CCU-BLS-NH16",
+        "breach": "Weight 120.0MT > Limit 75.0MT & Height 5.25m > Clearance 4.95m",
+        "bypass_route_id": "BYPASS-KHARAGPUR-NH16",
+        "bypass_penalty_km": 52.0,
+        "notes": "Severe corrosion monitoring. Cargo > 75MT must bypass via Kharagpur heavy axle corridor."
+      },
+      {
+        "bridge_id": "BRG-MH-BHOR-TUNNEL-02",
+        "bridge_name": "Bhor Ghat Khandala Expressway Tunnel",
+        "segment_id": "SEG-JNPT-PUN-NH48",
+        "breach": "Height 5.25m > Clearance 4.85m",
+        "bypass_route_id": "BYPASS-OLD-MUM-PUN-NH48",
+        "bypass_penalty_km": 38.0,
+        "notes": "Crown clearance 4.85m in right lane. Super-loads > 4.80m diverted to Old NH-48 surface route."
+      },
+      {
+        "bridge_id": "BRG-MH-KASARA-ROB-01",
+        "bridge_name": "Kasara Ghat Railway Overbridge",
+        "segment_id": "SEG-JNPT-NGP-NH160",
+        "breach": "Weight 120.0MT > Limit 90.0MT & Height 5.25m > Clearance 4.8m",
+        "bypass_route_id": "SEG-JNPT-PUN-NH48",
+        "bypass_penalty_km": 185.0,
+        "notes": "CRITICAL OVERHEAD CLEARANCE (4.80m). ODC height > 4.75m MUST bypass via Pune-Solapur-Nagpur."
+      },
+      {
+        "bridge_id": "BRG-KA-KALI-01",
+        "bridge_name": "Kali River Estuary Span",
+        "segment_id": "SEG-BLG-BLR-NH48",
+        "breach": "Weight 120.0MT > Limit 95.0MT & Height 5.25m > Clearance 5.1m",
+        "bypass_route_id": "BYPASS-DHARWAD-NH48",
+        "bypass_penalty_km": 28.0,
+        "notes": "Wind sway restrictions apply during monsoon. Escort mandated."
+      },
+      {
+        "bridge_id": "BRG-TN-PALAR-01",
+        "bridge_name": "Palar River Pre-stressed Girder",
+        "segment_id": "SEG-MAA-BLR-NH48",
+        "breach": "Weight 120.0MT > Limit 110.0MT",
+        "bypass_route_id": "BYPASS-VELLORE-NH48",
+        "bypass_penalty_km": 15.0,
+        "notes": "Center-span load restriction for multi-axle trailers > 100MT."
+      }
+    ],
+    "pruned_segments_count": 1,
+    "pruned_details": [
+      {
+        "segment_id": "SEG-VTZ-JAG-NH30",
+        "source": "PORT_CODE_INVTZ",
+        "target": "JUNC_JAGDALPUR",
+        "reason": "Ghat curve geometry violation: Cargo width 4.6m exceeds max 4.5m"
+      }
+    ]
+  },
+  "compliance_matrix": {
+    "permits_checklist": [
+      {
+        "jurisdiction": "CENTRAL_MORTH",
+        "authority": "Ministry of Road Transport & Highways (MoRTH)",
+        "permit_code": "MORTH-ONLINE-SPECIAL-PERMIT",
+        "statutory_fee_inr": 40915.0,
+        "sla_days": 5,
+        "portal_url": "https://morth-owdc.nic.in/",
+        "mandatory": true
+      },
+      {
+        "jurisdiction": "STATE_AP",
+        "authority": "Andhra Pradesh Transport Department",
+        "permit_code": "FORM-ODC-AP-1",
+        "statutory_fee_inr": 13691.38,
+        "sla_days": 4,
+        "portal_url": "https://aptransport.org/odc_permits",
+        "mandatory": true
+      },
+      {
+        "jurisdiction": "STATE_CG",
+        "authority": "Chhattisgarh Transport Department",
+        "permit_code": "CG-TRANSPORT-ODC-PERMIT",
+        "statutory_fee_inr": 10875.98,
+        "sla_days": 3,
+        "portal_url": "https://cgtransport.gov.in/odc",
+        "mandatory": true
+      },
+      {
+        "jurisdiction": "STATE_OD",
+        "authority": "State Transport Authority Odisha",
+        "permit_code": "OD-RTO-PERMIT-4",
+        "statutory_fee_inr": 11923.97,
+        "sla_days": 5,
+        "portal_url": "https://odishatransport.gov.in/odc",
+        "mandatory": true
+      }
+    ],
+    "total_statutory_fee_inr": 77406.33,
+    "aggregate_survey_sla_days": 7,
+    "escort_mandates": [
+      "HIGHWAY PATROL POLICE ESCORT: Mandated under Motor Vehicles Act Section 112 for super-heavy ODC convoy.",
+      "State of AP: Mandatory 2-vehicle convoy (Front pilot with amber strobe + rear escort) required by Andhra Pradesh Transport Department.",
+      "State of CG: Mandatory 2-vehicle convoy (Front pilot with amber strobe + rear escort) required by Chhattisgarh Transport Department.",
+      "State of OD: Mandatory 2-vehicle convoy (Front pilot with amber strobe + rear escort) required by State Transport Authority Odisha."
+    ],
+    "night_travel_restrictions": [
+      "State of OD: Movement STRICTLY PROHIBITED between 20:00 and 06:00 hrs on all corridors."
+    ],
+    "requires_police_convoy": true
+  },
+  "risk_evaluation": {
+    "risk_score": 100,
+    "status": "FLAGGED_FOR_DISPATCHER_SURVEY",
+    "recommended_action": "HUMAN_SURVEY_REQUIRED",
+    "summary": "Consignment exceeds automated clearance threshold. Human dispatcher route survey & engineering waiver mandatory.",
+    "risk_factors": [
+      "Heavy Lift (80-120MT): Structural girder verification required (+15)",
+      "Sub-optimal Axle Line Margin (12.93MT/axle) (+10)",
+      "Extreme Vertical Clearance (5.25m): High-tension wire & gantry hazard (+20)",
+      "Super-Wide Consignment (4.6m): Complete opposite carriageway closure needed (+20)",
+      "Structural Bottleneck Detours (8 bridges bypassed) (+20)"
+    ]
+  },
+  "status": "FLAGGED_FOR_DISPATCHER_SURVEY",
+  "risk_score": 100,
+  "requires_human_dispatcher_waiver": true,
+  "execution_metadata": {
+    "engine": "Sealand-RAL-v2.1",
+    "deterministic_solver": "NetworkX Dijkstra + RapidFuzz Trigram",
+    "execution_duration_ms": 28.69,
+    "zero_llm_guarantee": true,
+    "db_persisted": false
+  }
+}

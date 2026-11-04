@@ -1,0 +1,36 @@
+================================================================================
+SEALAND LOGISTICS GROUP - SPECIALIZED PROJECT CARGO DIVISION
+HEAVY HAUL CONSIGNMENT WAYBILL & PHYSICAL SURVEY SPECIFICATION
+DOCUMENT REF: DOC-2026-PETROCHEM-COL-003
+================================================================================
+CONSIGNMENT TITLE: Super-Tall Pressure Vessel Route Clearance Dossier
+SURVEY REFERENCE : SRV-INBOM-NGP-2026-LNT-03
+DATE ISSUED      : 04-Nov-2026 14:44:28 UTC
+CONTRACTOR       : Sealand Logistics Group - Project Cargo Western Division
+
+[1. SHIPPER DETAILS]
+Company Name : Larsen & Toubro Heavy Engineering (L&T)
+Facility     : Hazira Manufacturing Complex / Powai Works
+Location     : Surat / Mumbai, Gujarat / Maharashtra
+
+[2. CONSIGNEE & DELIVERY SITE]
+Company Name : Bharat Petroleum Corporation Limited (BPCL)
+Project Site : Petrochemical Expansion Project, MIHAN SEZ
+Destination  : Nagpur Multimodal Hub, Maharashtra
+
+[3. CARGO PHYSICAL DIMENSIONS & SPECIFICATIONS]
+Commodity Description : De-Ethanizer Hydrocarbon Fractionation Column (Super-Tall Overhang)
+Packaging Type        : Dual-Bogie Modular Turn-Table Hydraulic Convoy
+Net Cargo Weight      : 95.0 Metric Tons (MT)
+Overall Length        : 34.0 meters
+Consignment Width     : 4.4 meters
+Loaded Vehicle Height : 5.15 meters
+Modular Axle Lines    : 12 Hydraulic Axle Lines
+Port of Departure     : JNPT Mumbai (Nhava Sheva Shallow Water Berth)
+Destination Hub       : Nagpur Multimodal Hub (MH)
+
+[4. STATUTORY DECLARATION & SAFETY COMPLIANCE]
+- Compliance with Indian Roads Congress Code IRC:SP:35 (Heavy Multi-Axle Trailers).
+- Ministry of Road Transport & Highways (MoRTH) Central Portal Filing Mandatory.
+- Escort convoy vehicles with revolving amber beacons must be pre-arranged.
+================================================================================

@@ -1,0 +1,29 @@
+{
+  "document_id": "DOC-2026-PETROCHEM-COL-003",
+  "title": "Super-Tall Pressure Vessel Route Clearance Dossier",
+  "shipper": {
+    "company_name": "Larsen & Toubro Heavy Engineering (L&T)",
+    "facility": "Hazira Manufacturing Complex / Powai Works",
+    "city": "Surat / Mumbai",
+    "state": "Gujarat / Maharashtra"
+  },
+  "consignee": {
+    "company_name": "Bharat Petroleum Corporation Limited (BPCL)",
+    "site": "Petrochemical Expansion Project, MIHAN SEZ",
+    "delivery_hub": "Nagpur Multimodal Hub",
+    "state": "Maharashtra"
+  },
+  "cargo_manifest": {
+    "commodity": "De-Ethanizer Hydrocarbon Fractionation Column (Super-Tall Overhang)",
+    "package_type": "Dual-Bogie Modular Turn-Table Hydraulic Convoy",
+    "net_cargo_weight_mt": 95.0,
+    "overall_length_m": 34.0,
+    "overall_width_m": 4.4,
+    "loaded_height_m": 5.15,
+    "axle_lines_demanded": 12,
+    "origin_port": "JNPT Mumbai (Nhava Sheva Shallow Water Berth)",
+    "destination_location": "Nagpur Multimodal Hub (MH)"
+  },
+  "transport_contractor": "Sealand Logistics Group - Project Cargo Western Division",
+  "survey_reference": "SRV-INBOM-NGP-2026-LNT-03"
+}

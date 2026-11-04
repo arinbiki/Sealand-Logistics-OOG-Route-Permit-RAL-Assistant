@@ -1,0 +1,29 @@
+{
+  "document_id": "DOC-2026-BHEL-TURBINE-001",
+  "title": "Consignment Note & Technical Dimension Specification",
+  "shipper": {
+    "company_name": "Bharat Heavy Electricals Limited (BHEL)",
+    "facility": "Heavy Power Equipment Plant, Ramachandrapuram",
+    "city": "Hyderabad",
+    "state": "Telangana"
+  },
+  "consignee": {
+    "company_name": "NTPC Limited - Lara Super Thermal Power Project",
+    "site": "Chhapora / Raigarh Industrial Corridor",
+    "delivery_hub": "Raipur Logistics Hub",
+    "state": "Chhattisgarh"
+  },
+  "cargo_manifest": {
+    "commodity": "Supercritical 800MW Steam Turbine High-Pressure Rotor & Casing",
+    "package_type": "Crated Steel Skid on Hydraulic Multi-Axle Line",
+    "net_cargo_weight_mt": 120.0,
+    "overall_length_m": 28.0,
+    "overall_width_m": 4.6,
+    "loaded_height_m": 5.25,
+    "axle_lines_demanded": 14,
+    "origin_port": "Visakhapatnam Port (VPT Berth 4)",
+    "destination_location": "Raipur Logistics Hub (CG)"
+  },
+  "transport_contractor": "Sealand Logistics Group - Project Cargo Heavy Lift Division",
+  "survey_reference": "SRV-INVTZ-RPR-2026-BHEL-01"
+}

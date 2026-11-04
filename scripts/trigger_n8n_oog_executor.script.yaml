@@ -28,7 +28,7 @@ schema:
       default: "SEALAND_PROJECT_CARGO_DIV"
     n8n_webhook_url:
       type: string
-      default: "https://ubuntu.arindam818.cloud/webhook/oog-permit-notification"
+      default: "http://localhost:5678/webhook/oog-permit-notification"
     n8n_token:
       type: string
       default: ""

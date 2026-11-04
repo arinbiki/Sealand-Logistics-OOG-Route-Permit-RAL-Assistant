@@ -1,0 +1,36 @@
+================================================================================
+SEALAND LOGISTICS GROUP - SPECIALIZED PROJECT CARGO DIVISION
+HEAVY HAUL CONSIGNMENT WAYBILL & PHYSICAL SURVEY SPECIFICATION
+DOCUMENT REF: DOC-2026-BHEL-TURBINE-001
+================================================================================
+CONSIGNMENT TITLE: Consignment Note & Technical Dimension Specification
+SURVEY REFERENCE : SRV-INVTZ-RPR-2026-BHEL-01
+DATE ISSUED      : 04-Nov-2026 14:44:28 UTC
+CONTRACTOR       : Sealand Logistics Group - Project Cargo Heavy Lift Division
+
+[1. SHIPPER DETAILS]
+Company Name : Bharat Heavy Electricals Limited (BHEL)
+Facility     : Heavy Power Equipment Plant, Ramachandrapuram
+Location     : Hyderabad, Telangana
+
+[2. CONSIGNEE & DELIVERY SITE]
+Company Name : NTPC Limited - Lara Super Thermal Power Project
+Project Site : Chhapora / Raigarh Industrial Corridor
+Destination  : Raipur Logistics Hub, Chhattisgarh
+
+[3. CARGO PHYSICAL DIMENSIONS & SPECIFICATIONS]
+Commodity Description : Supercritical 800MW Steam Turbine High-Pressure Rotor & Casing
+Packaging Type        : Crated Steel Skid on Hydraulic Multi-Axle Line
+Net Cargo Weight      : 120.0 Metric Tons (MT)
+Overall Length        : 28.0 meters
+Consignment Width     : 4.6 meters
+Loaded Vehicle Height : 5.25 meters
+Modular Axle Lines    : 14 Hydraulic Axle Lines
+Port of Departure     : Visakhapatnam Port (VPT Berth 4)
+Destination Hub       : Raipur Logistics Hub (CG)
+
+[4. STATUTORY DECLARATION & SAFETY COMPLIANCE]
+- Compliance with Indian Roads Congress Code IRC:SP:35 (Heavy Multi-Axle Trailers).
+- Ministry of Road Transport & Highways (MoRTH) Central Portal Filing Mandatory.
+- Escort convoy vehicles with revolving amber beacons must be pre-arranged.
+================================================================================

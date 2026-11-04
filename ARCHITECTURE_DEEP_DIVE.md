@@ -113,3 +113,4 @@ $$\text{Risk Score} = 15 + \Delta_{\text{weight}} + \Delta_{\text{axle}} + \Delt
 #### Governance Threshold:
 * **Score $\le 70$**: `APPROVED_AUTO_PERMIT` $\implies$ Port clearance pass green-lit.
 * **Score $> 70$**: `FLAGGED_FOR_DISPATCHER_SURVEY` $\implies$ Workflow suspends for engineering inspection and audited waiver in the React 19 Raw App.
+

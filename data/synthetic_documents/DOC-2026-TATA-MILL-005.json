@@ -1,0 +1,29 @@
+{
+  "document_id": "DOC-2026-TATA-MILL-005",
+  "title": "Industrial Steel Plant Machinery Waybill & Transit Certificate",
+  "shipper": {
+    "company_name": "SMS group India Private Limited",
+    "facility": "Metals Technology Engineering Center",
+    "city": "Kolkata",
+    "state": "West Bengal"
+  },
+  "consignee": {
+    "company_name": "Tata Steel Limited - Jamshedpur Works",
+    "site": "LD2 & Slab Caster Modernization Plant, Adityapur",
+    "delivery_hub": "Jamshedpur Tata Steel Complex",
+    "state": "Jharkhand"
+  },
+  "cargo_manifest": {
+    "commodity": "Cast Steel Reversing Roughing Stand Housing Frame",
+    "package_type": "Direct Well-Deck Hydraulic Modular Low-Bed",
+    "net_cargo_weight_mt": 70.0,
+    "overall_length_m": 18.5,
+    "overall_width_m": 3.5,
+    "loaded_height_m": 4.4,
+    "axle_lines_demanded": 8,
+    "origin_port": "Kolkata Port (Netaji Subhas Dock Berth 5)",
+    "destination_location": "Jamshedpur Tata Steel Complex (JH)"
+  },
+  "transport_contractor": "Sealand Logistics Group - Eastern Corridor Division",
+  "survey_reference": "SRV-INCCU-JAM-2026-TATA-05"
+}

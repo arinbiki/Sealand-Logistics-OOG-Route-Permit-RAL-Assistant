@@ -1,0 +1,226 @@
+{
+  "survey_id": "SRV-INMUN-AMD-2026-SUZL-04",
+  "client_id": "SEALAND_SYNTHETIC_INGESTION_SUITE",
+  "timestamp": "2026-11-04T14:44:28.111525+00:00",
+  "origin": {
+    "query": "Mundra Port (Adani Ports Heavy Multi-Purpose Terminal)",
+    "node_id": "PORT_CODE_INMUN",
+    "node_name": "Mundra Port",
+    "state": "GJ",
+    "lat": 22.7441,
+    "lon": 69.7042
+  },
+  "destination": {
+    "query": "Ahmedabad Sanand Hub (GJ)",
+    "node_id": "HUB_AHMEDABAD",
+    "node_name": "Ahmedabad Sanand Auto Hub",
+    "state": "GJ",
+    "lat": 23.0225,
+    "lon": 72.5714
+  },
+  "cargo_specs": {
+    "weight_mt": 140.0,
+    "height_m": 5.4,
+    "width_m": 4.8,
+    "length_m": 32.0,
+    "axle_count": 16
+  },
+  "axle_engineering_analysis": {
+    "cargo_weight_mt": 140.0,
+    "puller_tare_mt": 12.0,
+    "trailer_tare_mt": 56.0,
+    "total_gvw_mt": 208.0,
+    "axle_count": 16,
+    "axle_load_mt": 13.0,
+    "permissible_axle_load_mt": 13.5,
+    "axle_overloaded": false,
+    "recommended_min_axle_count": 16,
+    "axle_loading_safety_margin_pct": 3.7
+  },
+  "route_summary": {
+    "total_distance_km": 360.0,
+    "estimated_transit_hours": 11.25,
+    "estimated_transit_days": 2.0,
+    "total_toll_plazas": 4,
+    "ghat_sections_count": 0,
+    "traversed_states": [
+      "GJ"
+    ],
+    "node_count": 2,
+    "corridor_path": "Mundra Port -> Ahmedabad Sanand Auto Hub"
+  },
+  "corridor_segments": [
+    {
+      "from_node": "PORT_CODE_INMUN",
+      "to_node": "HUB_AHMEDABAD",
+      "segment_id": "SEG-MUN-AMD-NH947",
+      "highway": "NH-947",
+      "distance_km": 360.0,
+      "ghat": false,
+      "tolls": 4
+    }
+  ],
+  "map_coordinates": [
+    {
+      "node_id": "PORT_CODE_INMUN",
+      "node_name": "Mundra Port",
+      "lat": 22.7441,
+      "lon": 69.7042,
+      "state": "GJ"
+    },
+    {
+      "node_id": "HUB_AHMEDABAD",
+      "node_name": "Ahmedabad Sanand Auto Hub",
+      "lat": 23.0225,
+      "lon": 72.5714,
+      "state": "GJ"
+    }
+  ],
+  "bottlenecks": {
+    "bypasses_applied": [
+      {
+        "bridge_id": "BRG-AP-NAGAVALI-01",
+        "bridge_name": "Nagavali River Arch Bridge",
+        "segment_id": "SEG-VTZ-JAG-NH30",
+        "breach": "Weight 140.0MT > Limit 65.0MT & Height 5.4m > Clearance 5.2m",
+        "bypass_route_id": "SEG-VTZ-SAM-NH26",
+        "bypass_penalty_km": 140.0,
+        "notes": "Arch load limit strictly enforced by AP PWD. Loads > 65MT must detour via Sambalpur NH-26."
+      },
+      {
+        "bridge_id": "BRG-TS-SURYAPET-HT-01",
+        "bridge_name": "Suryapet High-Tension Transmission Crossing",
+        "segment_id": "SEG-SUR-HYD-NH65",
+        "breach": "Weight 140.0MT > Limit 130.0MT & Height 5.4m > Clearance 5.2m",
+        "bypass_route_id": "BYPASS-SURYAPET-LOCAL",
+        "bypass_penalty_km": 12.0,
+        "notes": "400kV PowerGrid line SAG risk in summer. Loads > 5.10m require line power shut-down permit."
+      },
+      {
+        "bridge_id": "BRG-CG-SHEONATH-01",
+        "bridge_name": "Sheonath River Arch Bridge (Durg)",
+        "segment_id": "SEG-NGP-RPR-NH53",
+        "breach": "Weight 140.0MT > Limit 130.0MT",
+        "bypass_route_id": "BYPASS-DURG-NH53-NEW",
+        "bypass_penalty_km": 18.0,
+        "notes": "Reinforced 6-lane bypass bridge available with 130MT capacity."
+      },
+      {
+        "bridge_id": "BRG-OD-MAHANADI-02",
+        "bridge_name": "Mahanadi Rail-Cum-Road Truss Bridge",
+        "segment_id": "SEG-PRT-SAM-NH53",
+        "breach": "Weight 140.0MT > Limit 80.0MT & Height 5.4m > Clearance 4.9m",
+        "bypass_route_id": "BYPASS-SAMBALPUR-RING",
+        "bypass_penalty_km": 45.0,
+        "notes": "Weight strictly capped at 80MT. Heavier industrial consignments must use NH-49 via Jharsuguda."
+      },
+      {
+        "bridge_id": "BRG-WB-RUPNARAYAN-01",
+        "bridge_name": "Rupnarayan River Kolaghat Truss Bridge",
+        "segment_id": "SEG-CCU-BLS-NH16",
+        "breach": "Weight 140.0MT > Limit 75.0MT & Height 5.4m > Clearance 4.95m",
+        "bypass_route_id": "BYPASS-KHARAGPUR-NH16",
+        "bypass_penalty_km": 52.0,
+        "notes": "Severe corrosion monitoring. Cargo > 75MT must bypass via Kharagpur heavy axle corridor."
+      },
+      {
+        "bridge_id": "BRG-MH-BHOR-TUNNEL-02",
+        "bridge_name": "Bhor Ghat Khandala Expressway Tunnel",
+        "segment_id": "SEG-JNPT-PUN-NH48",
+        "breach": "Height 5.4m > Clearance 4.85m",
+        "bypass_route_id": "BYPASS-OLD-MUM-PUN-NH48",
+        "bypass_penalty_km": 38.0,
+        "notes": "Crown clearance 4.85m in right lane. Super-loads > 4.80m diverted to Old NH-48 surface route."
+      },
+      {
+        "bridge_id": "BRG-MH-KASARA-ROB-01",
+        "bridge_name": "Kasara Ghat Railway Overbridge",
+        "segment_id": "SEG-JNPT-NGP-NH160",
+        "breach": "Weight 140.0MT > Limit 90.0MT & Height 5.4m > Clearance 4.8m",
+        "bypass_route_id": "SEG-JNPT-PUN-NH48",
+        "bypass_penalty_km": 185.0,
+        "notes": "CRITICAL OVERHEAD CLEARANCE (4.80m). ODC height > 4.75m MUST bypass via Pune-Solapur-Nagpur."
+      },
+      {
+        "bridge_id": "BRG-KA-KALI-01",
+        "bridge_name": "Kali River Estuary Span",
+        "segment_id": "SEG-BLG-BLR-NH48",
+        "breach": "Weight 140.0MT > Limit 95.0MT & Height 5.4m > Clearance 5.1m",
+        "bypass_route_id": "BYPASS-DHARWAD-NH48",
+        "bypass_penalty_km": 28.0,
+        "notes": "Wind sway restrictions apply during monsoon. Escort mandated."
+      },
+      {
+        "bridge_id": "BRG-TN-PALAR-01",
+        "bridge_name": "Palar River Pre-stressed Girder",
+        "segment_id": "SEG-MAA-BLR-NH48",
+        "breach": "Weight 140.0MT > Limit 110.0MT",
+        "bypass_route_id": "BYPASS-VELLORE-NH48",
+        "bypass_penalty_km": 15.0,
+        "notes": "Center-span load restriction for multi-axle trailers > 100MT."
+      }
+    ],
+    "pruned_segments_count": 1,
+    "pruned_details": [
+      {
+        "segment_id": "SEG-VTZ-JAG-NH30",
+        "source": "PORT_CODE_INVTZ",
+        "target": "JUNC_JAGDALPUR",
+        "reason": "Ghat curve geometry violation: Cargo width 4.8m exceeds max 4.5m"
+      }
+    ]
+  },
+  "compliance_matrix": {
+    "permits_checklist": [
+      {
+        "jurisdiction": "CENTRAL_MORTH",
+        "authority": "Ministry of Road Transport & Highways (MoRTH)",
+        "permit_code": "MORTH-ONLINE-SPECIAL-PERMIT",
+        "statutory_fee_inr": 31380.0,
+        "sla_days": 5,
+        "portal_url": "https://morth-owdc.nic.in/",
+        "mandatory": true
+      },
+      {
+        "jurisdiction": "STATE_GJ",
+        "authority": "Gujarat Ports and Transport Department",
+        "permit_code": "GJ-RTO-SUPER-CARGO",
+        "statutory_fee_inr": 21671.98,
+        "sla_days": 3,
+        "portal_url": "https://cot.gujarat.gov.in/supercargo",
+        "mandatory": true
+      }
+    ],
+    "total_statutory_fee_inr": 53051.98,
+    "aggregate_survey_sla_days": 7,
+    "escort_mandates": [
+      "HIGHWAY PATROL POLICE ESCORT: Mandated under Motor Vehicles Act Section 112 for super-heavy ODC convoy.",
+      "State of GJ: Mandatory 2-vehicle convoy (Front pilot with amber strobe + rear escort) required by Gujarat Ports and Transport Department."
+    ],
+    "night_travel_restrictions": [],
+    "requires_police_convoy": true
+  },
+  "risk_evaluation": {
+    "risk_score": 100,
+    "status": "FLAGGED_FOR_DISPATCHER_SURVEY",
+    "recommended_action": "HUMAN_SURVEY_REQUIRED",
+    "summary": "Consignment exceeds automated clearance threshold. Human dispatcher route survey & engineering waiver mandatory.",
+    "risk_factors": [
+      "Extreme Super-Heavy Lift (>120MT): Dynamic bridge deflection hazard (+25)",
+      "Sub-optimal Axle Line Margin (13.0MT/axle) (+10)",
+      "Extreme Vertical Clearance (5.4m): High-tension wire & gantry hazard (+20)",
+      "Super-Wide Consignment (4.8m): Complete opposite carriageway closure needed (+20)",
+      "Structural Bottleneck Detours (9 bridges bypassed) (+20)"
+    ]
+  },
+  "status": "FLAGGED_FOR_DISPATCHER_SURVEY",
+  "risk_score": 100,
+  "requires_human_dispatcher_waiver": true,
+  "execution_metadata": {
+    "engine": "Sealand-RAL-v2.1",
+    "deterministic_solver": "NetworkX Dijkstra + RapidFuzz Trigram",
+    "execution_duration_ms": 4.62,
+    "zero_llm_guarantee": true,
+    "db_persisted": false
+  }
+}

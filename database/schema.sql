@@ -310,3 +310,4 @@ INSERT INTO rto_rules (state_code, state_name, cargo_category, permit_type_requi
 ('GJ', 'Gujarat', 'ODC_OOG', 'Gujarat Motor Vehicles Dept ODC Transit Approval', 'Commissioner of Transport, Gandhinagar', 'https://cot.gujarat.gov.in', 3,
  '{"base_fee_inr": 15000, "weight_surcharge_per_mt_inr": 115, "distance_rate_per_km_inr": 45, "width_penalty_factor": 1.2}'::jsonb,
  '{"pilot_car": true, "police_escort_if_heavy": false, "night_movement_allowed": true}'::jsonb);
+

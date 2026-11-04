@@ -1,0 +1,29 @@
+{
+  "document_id": "DOC-2026-THERMAX-BLR-006",
+  "title": "Boiler Drum Heavy Haul Transport Order & Route Survey Assessment",
+  "shipper": {
+    "company_name": "Thermax Limited - Boiler & Heater Division",
+    "facility": "Chinchwad Works",
+    "city": "Pune",
+    "state": "Maharashtra"
+  },
+  "consignee": {
+    "company_name": "Vedanta Limited - Aluminium & Power Division",
+    "site": "Jharsuguda Smelter Plant Power Block 3",
+    "delivery_hub": "Jharsuguda Industrial Hub",
+    "state": "Odisha"
+  },
+  "cargo_manifest": {
+    "commodity": "Subcritical Power Boiler Steam Drum with Internal Cyclone Separators",
+    "package_type": "Dual-Saddle Mounting on 12 Hydraulic Axle Lines",
+    "net_cargo_weight_mt": 110.0,
+    "overall_length_m": 26.0,
+    "overall_width_m": 4.1,
+    "loaded_height_m": 4.95,
+    "axle_lines_demanded": 12,
+    "origin_port": "Paradip Port (PICT Multi-Purpose Terminal)",
+    "destination_location": "Jharsuguda Industrial Hub (OD)"
+  },
+  "transport_contractor": "Sealand Logistics Group - Odisha Project Operations",
+  "survey_reference": "SRV-INPRT-JHS-2026-THRX-06"
+}

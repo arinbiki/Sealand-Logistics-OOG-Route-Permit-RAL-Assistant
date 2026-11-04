@@ -19,7 +19,7 @@ def main(
     total_distance_km: float = 730.0,
     total_statutory_fee_inr: float = 48500.0,
     client_id: str = "SEALAND_PROJECT_CARGO_DIV",
-    n8n_webhook_url: str = "https://ubuntu.arindam818.cloud/webhook/oog-permit-notification",
+    n8n_webhook_url: str = "http://localhost:5678/webhook/oog-permit-notification",
     n8n_token: str = ""
 ) -> dict:
     """Dispatches webhook to n8n to send email clearance pass and trigger automated filing."""

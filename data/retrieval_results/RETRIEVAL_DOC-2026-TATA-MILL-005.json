@@ -1,0 +1,146 @@
+{
+  "survey_id": "SRV-INCCU-JAM-2026-TATA-05",
+  "client_id": "SEALAND_SYNTHETIC_INGESTION_SUITE",
+  "timestamp": "2026-11-04T14:44:28.123148+00:00",
+  "origin": {
+    "query": "Kolkata Port (Netaji Subhas Dock Berth 5)",
+    "node_id": "PORT_CODE_INCCU",
+    "node_name": "Kolkata Syama Prasad Mookerjee Port",
+    "state": "WB",
+    "lat": 22.5411,
+    "lon": 88.3142
+  },
+  "destination": {
+    "query": "Jamshedpur Tata Steel Complex (JH)",
+    "node_id": "HUB_JAMSHEDPUR",
+    "node_name": "Jamshedpur Tata Steel Complex",
+    "state": "JH",
+    "lat": 22.8046,
+    "lon": 86.2029
+  },
+  "cargo_specs": {
+    "weight_mt": 70.0,
+    "height_m": 4.4,
+    "width_m": 3.5,
+    "length_m": 18.5,
+    "axle_count": 8
+  },
+  "axle_engineering_analysis": {
+    "cargo_weight_mt": 70.0,
+    "puller_tare_mt": 12.0,
+    "trailer_tare_mt": 28.0,
+    "total_gvw_mt": 110.0,
+    "axle_count": 8,
+    "axle_load_mt": 13.75,
+    "permissible_axle_load_mt": 13.5,
+    "axle_overloaded": true,
+    "recommended_min_axle_count": 9,
+    "axle_loading_safety_margin_pct": -1.85
+  },
+  "route_summary": {
+    "total_distance_km": 285.0,
+    "estimated_transit_hours": 10.56,
+    "estimated_transit_days": 1.6,
+    "total_toll_plazas": 3,
+    "ghat_sections_count": 0,
+    "traversed_states": [
+      "JH",
+      "WB"
+    ],
+    "node_count": 2,
+    "corridor_path": "Kolkata Syama Prasad Mookerjee Port -> Jamshedpur Tata Steel Complex"
+  },
+  "corridor_segments": [
+    {
+      "from_node": "PORT_CODE_INCCU",
+      "to_node": "HUB_JAMSHEDPUR",
+      "segment_id": "SEG-CCU-JAM-NH18",
+      "highway": "NH-18",
+      "distance_km": 285.0,
+      "ghat": false,
+      "tolls": 3
+    }
+  ],
+  "map_coordinates": [
+    {
+      "node_id": "PORT_CODE_INCCU",
+      "node_name": "Kolkata Syama Prasad Mookerjee Port",
+      "lat": 22.5411,
+      "lon": 88.3142,
+      "state": "WB"
+    },
+    {
+      "node_id": "HUB_JAMSHEDPUR",
+      "node_name": "Jamshedpur Tata Steel Complex",
+      "lat": 22.8046,
+      "lon": 86.2029,
+      "state": "JH"
+    }
+  ],
+  "bottlenecks": {
+    "bypasses_applied": [
+      {
+        "bridge_id": "BRG-AP-NAGAVALI-01",
+        "bridge_name": "Nagavali River Arch Bridge",
+        "segment_id": "SEG-VTZ-JAG-NH30",
+        "breach": "Weight 70.0MT > Limit 65.0MT",
+        "bypass_route_id": "SEG-VTZ-SAM-NH26",
+        "bypass_penalty_km": 140.0,
+        "notes": "Arch load limit strictly enforced by AP PWD. Loads > 65MT must detour via Sambalpur NH-26."
+      }
+    ],
+    "pruned_segments_count": 0,
+    "pruned_details": []
+  },
+  "compliance_matrix": {
+    "permits_checklist": [
+      {
+        "jurisdiction": "CENTRAL_MORTH",
+        "authority": "Ministry of Road Transport & Highways (MoRTH)",
+        "permit_code": "MORTH-ONLINE-SPECIAL-PERMIT",
+        "statutory_fee_inr": 17992.5,
+        "sla_days": 5,
+        "portal_url": "https://morth-owdc.nic.in/",
+        "mandatory": true
+      },
+      {
+        "jurisdiction": "STATE_WB",
+        "authority": "West Bengal Transport Directorate",
+        "permit_code": "WB-MOTOR-TRANS-OOG",
+        "statutory_fee_inr": 9987.52,
+        "sla_days": 6,
+        "portal_url": "https://wbtransport.gov.in/permits",
+        "mandatory": true
+      }
+    ],
+    "total_statutory_fee_inr": 27980.03,
+    "aggregate_survey_sla_days": 8,
+    "escort_mandates": [
+      "State of WB: Mandatory 2-vehicle convoy (Front pilot with amber strobe + rear escort) required by West Bengal Transport Directorate."
+    ],
+    "night_travel_restrictions": [
+      "State of WB: Movement STRICTLY PROHIBITED between 20:00 and 06:00 hrs on all corridors."
+    ],
+    "requires_police_convoy": false
+  },
+  "risk_evaluation": {
+    "risk_score": 53,
+    "status": "APPROVED_AUTO_PERMIT",
+    "recommended_action": "CLEARANCE_GRANTED",
+    "summary": "Deterministic constraints verified. Safe for automated permit filing and corridor dispatch.",
+    "risk_factors": [
+      "IRC:SP:35 Axle Line Overload (13.75MT/axle > 13.5MT limit) (+30)",
+      "Structural Bottleneck Detours (1 bridges bypassed) (+8)"
+    ]
+  },
+  "status": "APPROVED_AUTO_PERMIT",
+  "risk_score": 53,
+  "requires_human_dispatcher_waiver": false,
+  "execution_metadata": {
+    "engine": "Sealand-RAL-v2.1",
+    "deterministic_solver": "NetworkX Dijkstra + RapidFuzz Trigram",
+    "execution_duration_ms": 8.64,
+    "zero_llm_guarantee": true,
+    "db_persisted": false
+  }
+}

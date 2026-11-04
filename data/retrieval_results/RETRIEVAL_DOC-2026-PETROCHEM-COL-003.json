@@ -1,0 +1,195 @@
+{
+  "survey_id": "SRV-INBOM-NGP-2026-LNT-03",
+  "client_id": "SEALAND_SYNTHETIC_INGESTION_SUITE",
+  "timestamp": "2026-11-04T14:44:28.097646+00:00",
+  "origin": {
+    "query": "JNPT Mumbai (Nhava Sheva Shallow Water Berth)",
+    "node_id": "PORT_CODE_INBOM",
+    "node_name": "Jawaharlal Nehru Port Trust (JNPT Mumbai)",
+    "state": "MH",
+    "lat": 18.9499,
+    "lon": 72.9511
+  },
+  "destination": {
+    "query": "Nagpur Multimodal Hub (MH)",
+    "node_id": "HUB_NAGPUR",
+    "node_name": "Nagpur Multimodal Logistics Hub",
+    "state": "MH",
+    "lat": 21.1458,
+    "lon": 79.0882
+  },
+  "cargo_specs": {
+    "weight_mt": 95.0,
+    "height_m": 5.15,
+    "width_m": 4.4,
+    "length_m": 34.0,
+    "axle_count": 12
+  },
+  "axle_engineering_analysis": {
+    "cargo_weight_mt": 95.0,
+    "puller_tare_mt": 12.0,
+    "trailer_tare_mt": 42.0,
+    "total_gvw_mt": 149.0,
+    "axle_count": 12,
+    "axle_load_mt": 12.42,
+    "permissible_axle_load_mt": 13.5,
+    "axle_overloaded": false,
+    "recommended_min_axle_count": 12,
+    "axle_loading_safety_margin_pct": 8.02
+  },
+  "route_summary": {
+    "total_distance_km": 965.0,
+    "estimated_transit_hours": 43.86,
+    "estimated_transit_days": 5.4,
+    "total_toll_plazas": 9,
+    "ghat_sections_count": 1,
+    "traversed_states": [
+      "MH"
+    ],
+    "node_count": 2,
+    "corridor_path": "Jawaharlal Nehru Port Trust (JNPT Mumbai) -> Nagpur Multimodal Logistics Hub"
+  },
+  "corridor_segments": [
+    {
+      "from_node": "PORT_CODE_INBOM",
+      "to_node": "HUB_NAGPUR",
+      "segment_id": "SEG-JNPT-NGP-NH160",
+      "highway": "NH-160/NH-53",
+      "distance_km": 965.0,
+      "ghat": true,
+      "tolls": 9
+    }
+  ],
+  "map_coordinates": [
+    {
+      "node_id": "PORT_CODE_INBOM",
+      "node_name": "Jawaharlal Nehru Port Trust (JNPT Mumbai)",
+      "lat": 18.9499,
+      "lon": 72.9511,
+      "state": "MH"
+    },
+    {
+      "node_id": "HUB_NAGPUR",
+      "node_name": "Nagpur Multimodal Logistics Hub",
+      "lat": 21.1458,
+      "lon": 79.0882,
+      "state": "MH"
+    }
+  ],
+  "bottlenecks": {
+    "bypasses_applied": [
+      {
+        "bridge_id": "BRG-AP-NAGAVALI-01",
+        "bridge_name": "Nagavali River Arch Bridge",
+        "segment_id": "SEG-VTZ-JAG-NH30",
+        "breach": "Weight 95.0MT > Limit 65.0MT",
+        "bypass_route_id": "SEG-VTZ-SAM-NH26",
+        "bypass_penalty_km": 140.0,
+        "notes": "Arch load limit strictly enforced by AP PWD. Loads > 65MT must detour via Sambalpur NH-26."
+      },
+      {
+        "bridge_id": "BRG-OD-MAHANADI-02",
+        "bridge_name": "Mahanadi Rail-Cum-Road Truss Bridge",
+        "segment_id": "SEG-PRT-SAM-NH53",
+        "breach": "Weight 95.0MT > Limit 80.0MT & Height 5.15m > Clearance 4.9m",
+        "bypass_route_id": "BYPASS-SAMBALPUR-RING",
+        "bypass_penalty_km": 45.0,
+        "notes": "Weight strictly capped at 80MT. Heavier industrial consignments must use NH-49 via Jharsuguda."
+      },
+      {
+        "bridge_id": "BRG-WB-RUPNARAYAN-01",
+        "bridge_name": "Rupnarayan River Kolaghat Truss Bridge",
+        "segment_id": "SEG-CCU-BLS-NH16",
+        "breach": "Weight 95.0MT > Limit 75.0MT & Height 5.15m > Clearance 4.95m",
+        "bypass_route_id": "BYPASS-KHARAGPUR-NH16",
+        "bypass_penalty_km": 52.0,
+        "notes": "Severe corrosion monitoring. Cargo > 75MT must bypass via Kharagpur heavy axle corridor."
+      },
+      {
+        "bridge_id": "BRG-MH-BHOR-TUNNEL-02",
+        "bridge_name": "Bhor Ghat Khandala Expressway Tunnel",
+        "segment_id": "SEG-JNPT-PUN-NH48",
+        "breach": "Height 5.15m > Clearance 4.85m",
+        "bypass_route_id": "BYPASS-OLD-MUM-PUN-NH48",
+        "bypass_penalty_km": 38.0,
+        "notes": "Crown clearance 4.85m in right lane. Super-loads > 4.80m diverted to Old NH-48 surface route."
+      },
+      {
+        "bridge_id": "BRG-MH-KASARA-ROB-01",
+        "bridge_name": "Kasara Ghat Railway Overbridge",
+        "segment_id": "SEG-JNPT-NGP-NH160",
+        "breach": "Weight 95.0MT > Limit 90.0MT & Height 5.15m > Clearance 4.8m",
+        "bypass_route_id": "SEG-JNPT-PUN-NH48",
+        "bypass_penalty_km": 185.0,
+        "notes": "CRITICAL OVERHEAD CLEARANCE (4.80m). ODC height > 4.75m MUST bypass via Pune-Solapur-Nagpur."
+      },
+      {
+        "bridge_id": "BRG-KA-KALI-01",
+        "bridge_name": "Kali River Estuary Span",
+        "segment_id": "SEG-BLG-BLR-NH48",
+        "breach": "Height 5.15m > Clearance 5.1m",
+        "bypass_route_id": "BYPASS-DHARWAD-NH48",
+        "bypass_penalty_km": 28.0,
+        "notes": "Wind sway restrictions apply during monsoon. Escort mandated."
+      }
+    ],
+    "pruned_segments_count": 0,
+    "pruned_details": []
+  },
+  "compliance_matrix": {
+    "permits_checklist": [
+      {
+        "jurisdiction": "CENTRAL_MORTH",
+        "authority": "Ministry of Road Transport & Highways (MoRTH)",
+        "permit_code": "MORTH-ONLINE-SPECIAL-PERMIT",
+        "statutory_fee_inr": 37195.0,
+        "sla_days": 5,
+        "portal_url": "https://morth-owdc.nic.in/",
+        "mandatory": true
+      },
+      {
+        "jurisdiction": "STATE_MH",
+        "authority": "Maharashtra PWD & Motor Vehicles Dept",
+        "permit_code": "MH-PWD-SUPER-LOAD",
+        "statutory_fee_inr": 32103.75,
+        "sla_days": 5,
+        "portal_url": "https://transport.maharashtra.gov.in/superloads",
+        "mandatory": true
+      }
+    ],
+    "total_statutory_fee_inr": 69298.75,
+    "aggregate_survey_sla_days": 7,
+    "escort_mandates": [
+      "HIGHWAY PATROL POLICE ESCORT: Mandated under Motor Vehicles Act Section 112 for super-heavy ODC convoy.",
+      "State of MH: Mandatory 2-vehicle convoy (Front pilot with amber strobe + rear escort) required by Maharashtra PWD & Motor Vehicles Dept."
+    ],
+    "night_travel_restrictions": [
+      "State of MH: Movement STRICTLY PROHIBITED between 20:00 and 06:00 hrs on all corridors."
+    ],
+    "requires_police_convoy": true
+  },
+  "risk_evaluation": {
+    "risk_score": 94,
+    "status": "FLAGGED_FOR_DISPATCHER_SURVEY",
+    "recommended_action": "HUMAN_SURVEY_REQUIRED",
+    "summary": "Consignment exceeds automated clearance threshold. Human dispatcher route survey & engineering waiver mandatory.",
+    "risk_factors": [
+      "Heavy Lift (80-120MT): Structural girder verification required (+15)",
+      "Sub-optimal Axle Line Margin (12.42MT/axle) (+10)",
+      "Tight Overhead Clearance (5.15m): Sub-5.0m toll canopies & ROBs (+12)",
+      "Wide Load (4.4m): Toll plaza lane splitter width constraint (+10)",
+      "Ghat Terrain Traversal (1 sections): Hairpin turn & brake fade hazard (+12)",
+      "Structural Bottleneck Detours (6 bridges bypassed) (+20)"
+    ]
+  },
+  "status": "FLAGGED_FOR_DISPATCHER_SURVEY",
+  "risk_score": 94,
+  "requires_human_dispatcher_waiver": true,
+  "execution_metadata": {
+    "engine": "Sealand-RAL-v2.1",
+    "deterministic_solver": "NetworkX Dijkstra + RapidFuzz Trigram",
+    "execution_duration_ms": 4.46,
+    "zero_llm_guarantee": true,
+    "db_persisted": false
+  }
+}
