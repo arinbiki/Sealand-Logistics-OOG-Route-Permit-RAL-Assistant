@@ -8,10 +8,10 @@ import urllib.request
 import urllib.error
 
 N8N_BASE_URL = os.environ.get("N8N_BASE_URL", "https://ubuntu.arindam818.cloud/api/v1")
-N8N_API_KEY = os.environ.get(
-    "N8N_API_KEY",
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5YjU2NzE0My02MGI4LTQxNTUtYmFiOS1mYjM2OTE3YjVlMjgiLCJpc3MiOiJuOG4iLCJhdWQiOiJwdWJsaWMtYXBpIiwianRpIjoiNmFjMzA1YzAtMzllNi00NzAyLTgwYmItY2UwMWM5MWNjYjNmIiwiaWF0IjoxNzkxMjg3NDA5LCJleHAiOjE3OTY0Mjg4MDB9.sr2NtXAe2c6xiNRYjBxEJHMfcdES7Zla6bjH2pcW0QA"
-)
+N8N_API_KEY = os.environ.get("N8N_API_KEY", "")
+if not N8N_API_KEY:
+    # Try reading from environment or prompt
+    pass
 
 def deploy_workflow(file_path: str):
     with open(file_path, "r", encoding="utf-8") as f:
