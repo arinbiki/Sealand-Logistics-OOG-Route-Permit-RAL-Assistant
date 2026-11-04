@@ -5,6 +5,7 @@
 ### *Autonomous Zero-LLM "Retrieval-Augmented Logic" (RAL) Engine for Out-of-Gauge (OOG) & Over-Dimensional Cargo (ODC) Heavy Haulage*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](LICENSE)
+[![Author: Arindam Roy](https://img.shields.io/badge/LinkedIn-Arindam%20Roy-0A66C2.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/arindam-roy-80a556206/)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-3776AB.svg?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/downloads/)
 [![Zero-LLM Architecture](https://img.shields.io/badge/Engine-Zero--LLM%20Deterministic-10b981.svg?style=for-the-badge&logo=cpu&logoColor=white)](#-why-zero-llm-retrieval-augmented-logic-ral)
 [![Speed](https://img.shields.io/badge/Latency-1.55%20ms%20(Sub--2ms)-00d2ff.svg?style=for-the-badge&logo=speedtest&logoColor=white)](#-benchmark-performance-10000-live-route-solves)
@@ -66,10 +67,10 @@ The **Sealand OOG Route & Permit Assistant** replaces probabilistic text generat
 
 The repository includes two Full HD executive pitch and operational walkthrough videos with Microsoft Neural AI voiceovers (`en-US-ChristopherNeural`):
 
-| Video Presentation | Description | File Location | Specifications |
-|:---|:---|:---|:---:|
-| **1. Executive Pitch: Architecture & Business Value** | Comprehensive 5-minute executive pitch covering the heavy transport crisis, why LLMs fail, the Zero-LLM architecture, live dashboard embed, statutory permit matrices, human governance, and 10,000-route benchmark ROI. | [`assets/sealand_oog_executive_pitch.mp4`](assets/sealand_oog_executive_pitch.mp4) | 1080p Full HD, 5m 22s, 9.08 MB |
-| **2. Live Operations & Dashboard Navigation** | Step-by-step 5-minute operational walkthrough exploring 1-click presets, origin/destination routing, real-time physics sliders, spatial SVG map, bottleneck detours, state permit table, and the Dispatcher Waiver Station. | [`assets/sealand_dashboard_live_operations.mp4`](assets/sealand_dashboard_live_operations.mp4) | 1080p Full HD, 5m 38s, 9.26 MB |
+| Video Presentation | Description | Streaming Video | Local Archive | Specifications |
+|:---|:---|:---:|:---:|:---:|
+| **1. Executive Pitch: Architecture & Business Value** | Comprehensive 5-minute executive pitch covering the heavy transport crisis, why LLMs fail, the Zero-LLM architecture, live dashboard embed, statutory permit matrices, human governance, and 10,000-route benchmark ROI. | [![YouTube Watch](https://img.shields.io/badge/YouTube-Watch%20Pitch%20(5m)-red.svg?style=flat-square&logo=youtube&logoColor=white)](https://youtu.be/ydruRJ0m5Ig) | [`assets/sealand_oog_executive_pitch.mp4`](assets/sealand_oog_executive_pitch.mp4) | 1080p Full HD, 5m 22s |
+| **2. Live Operations & Dashboard Navigation** | Step-by-step 5-minute operational walkthrough exploring 1-click presets, origin/destination routing, real-time physics sliders, spatial SVG map, bottleneck detours, state permit table, and the Dispatcher Waiver Station. | [![YouTube Watch](https://img.shields.io/badge/YouTube-Watch%20Ops%20(5m)-red.svg?style=flat-square&logo=youtube&logoColor=white)](https://youtu.be/WFSLdyc-ZYQ) | [`assets/sealand_dashboard_live_operations.mp4`](assets/sealand_dashboard_live_operations.mp4) | 1080p Full HD, 5m 38s |
 
 > [!TIP]
 > Both videos can be generated autonomously at any time headlessly using the Python scripts in [`scripts/generate_oog_pitch_video.py`](scripts/generate_oog_pitch_video.py) and [`scripts/generate_dashboard_operations_video.py`](scripts/generate_dashboard_operations_video.py).
@@ -624,11 +625,13 @@ CREATE TABLE oog_audit_logs (
 
 ---
 
-## 📄 License & Attribution
+## 📄 License & Author Attribution
 
-This prototype was engineered for **Sealand Logistics Group** and is distributed under the [MIT License](LICENSE).
+This prototype was engineered by **Arindam Roy** (Logistics Automation Specialist) for **Sealand Logistics Group** and is distributed under the [MIT License](LICENSE).
 
 <p align="center">
+  <b>Arindam Roy</b> • Logistics Automation Specialist<br/>
+  <a href="https://www.linkedin.com/in/arindam-roy-80a556206/">LinkedIn Profile</a> • <a href="https://github.com/arinbiki">GitHub Profile</a><br/><br/>
   <b>Sealand Logistics Group</b> • Global Heavy-Lift & Project Forwarding<br/>
   <i>Engineered with 100% Deterministic Precision. Zero Demurrage. Zero Delay.</i>
 </p>
