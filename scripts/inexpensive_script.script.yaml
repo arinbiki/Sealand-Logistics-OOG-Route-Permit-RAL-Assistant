@@ -1,0 +1,52 @@
+summary: Sealand OOG Route Survey & Permit RAL Flagship Engine
+description: Zero-LLM Deterministic Retrieval-Augmented Logic (RAL) route solver, bridge bottleneck pruner, multi-axle loading evaluator, and state RTO permit matrix calculator for Out-of-Gauge heavy haulage across India.
+kind: script
+schema:
+  $schema: https://json-schema.org/draft/2020-12/schema
+  type: object
+  properties:
+    origin_query:
+      type: string
+      default: "Visakhapatnam Port"
+      description: Origin seaport, freight hub, or city name
+    destination_query:
+      type: string
+      default: "Raipur Logistics Hub"
+      description: Destination industrial plant, mining site, or delivery hub
+    cargo_weight_mt:
+      type: number
+      default: 85.0
+      description: Net cargo weight in metric tons (MT)
+    cargo_length_m:
+      type: number
+      default: 24.5
+      description: Overall consignment length in meters
+    cargo_width_m:
+      type: number
+      default: 4.2
+      description: Overall consignment width in meters
+    cargo_height_m:
+      type: number
+      default: 5.1
+      description: Loaded vehicle overall height in meters
+    axle_count:
+      type: integer
+      default: 10
+      description: Number of modular hydraulic axle lines
+    client_id:
+      type: string
+      default: "SEALAND_PROJECT_CARGO_DIV"
+      description: Client or freight forwarding division identifier
+    survey_id:
+      type: string
+      default: ""
+      description: Optional survey ID (auto-generated if empty)
+    allow_bypasses:
+      type: boolean
+      default: true
+      description: Whether to route around known bridge bottlenecks using approved detours
+    db:
+      type: object
+      default: null
+      description: Windmill PostgreSQL Resource for survey persistence and audit logging
+  required: []

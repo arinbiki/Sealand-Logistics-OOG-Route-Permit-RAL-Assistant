@@ -1,0 +1,106 @@
+{
+  "name": "Sealand OOG Survey Ingestion Sensor",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "oog-survey-request",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "node-webhook-inbound",
+      "name": "Webhook Inbound Survey Request",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [220, 300],
+      "webhookId": "oog-survey-request-webhook-id"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Zero-LLM Deterministic Heuristic Classifier\n// Extracts cargo dimensions, weight, and routes from unstructured text or structured JSON\n\nconst raw = $input.first().json.body || $input.first().json;\n\n// 1. Text extraction fallback if raw message text provided\nlet origin = raw.origin || raw.origin_query || \"\";\nlet destination = raw.destination || raw.destination_query || \"\";\nlet weight = parseFloat(raw.weight_mt || raw.weight || 0);\nlet height = parseFloat(raw.height_m || raw.height || 0);\nlet width = parseFloat(raw.width_m || raw.width || 0);\nlet length = parseFloat(raw.length_m || raw.length || 0);\nlet axles = parseInt(raw.axle_count || raw.axles || 0);\n\nconst text = (raw.text || raw.message || raw.description || \"\").toString();\n\nif (text) {\n  // Regex extraction for weight (e.g. 120MT, 85 tons, 95 MT)\n  const weightMatch = text.match(/(\\d+(?:\\.\\d+)?)\\s*(?:MT|metric\\s*tons?|tons?)/i);\n  if (weightMatch && !weight) weight = parseFloat(weightMatch[1]);\n\n  // Regex for height (e.g. 5.1m, 5.2 meters)\n  const heightMatch = text.match(/(?:height|ht|h)[:\\s]*(\\d+(?:\\.\\d+)?)\\s*m/i);\n  if (heightMatch && !height) height = parseFloat(heightMatch[1]);\n\n  // Regex for width (e.g. 4.2m width, w: 4.5m)\n  const widthMatch = text.match(/(?:width|wd|w)[:\\s]*(\\d+(?:\\.\\d+)?)\\s*m/i);\n  if (widthMatch && !width) width = parseFloat(widthMatch[1]);\n\n  // Regex for length (e.g. 24.5m length, l: 28m)\n  const lengthMatch = text.match(/(?:length|len|l)[:\\s]*(\\d+(?:\\.\\d+)?)\\s*m/i);\n  if (lengthMatch && !length) length = parseFloat(lengthMatch[1]);\n\n  // Port and Destination recognition\n  if (/vizag|visakhapatnam/i.test(text)) origin = origin || \"Visakhapatnam Port\";\n  if (/chennai|madras/i.test(text)) origin = origin || \"Chennai Port\";\n  if (/jnpt|mumbai|nhava\\s*sheva/i.test(text)) origin = origin || \"JNPT Mumbai\";\n  if (/kolkata|calcutta|haldia/i.test(text)) origin = origin || \"Kolkata Port\";\n  if (/paradip/i.test(text)) origin = origin || \"Paradip Port\";\n  if (/mundra/i.test(text)) origin = origin || \"Mundra Port\";\n\n  if (/raipur|bhilai/i.test(text)) destination = destination || \"Raipur Logistics Hub\";\n  if (/nagpur|mihan/i.test(text)) destination = destination || \"Nagpur Multimodal Hub\";\n  if (/hyderabad|secunderabad/i.test(text)) destination = destination || \"Hyderabad Heavy Industrial\";\n  if (/jharsuguda|rourkela/i.test(text)) destination = destination || \"Jharsuguda Industrial Hub\";\n  if (/jamshedpur|tatanagar/i.test(text)) destination = destination || \"Jamshedpur Tata Steel Complex\";\n  if (/pune|chakan/i.test(text)) destination = destination || \"Pune Chakan Auto Cluster\";\n  if (/bangalore|bengaluru/i.test(text)) destination = destination || \"Bangalore Nelamangala Hub\";\n  if (/ahmedabad|sanand/i.test(text)) destination = destination || \"Ahmedabad Sanand Hub\";\n}\n\n// Defaults\norigin = origin || \"Visakhapatnam Port\";\ndestination = destination || \"Raipur Logistics Hub\";\nweight = weight || 85.0;\nheight = height || 5.1;\nwidth = width || 4.2;\nlength = length || 24.5;\naxles = axles || Math.max(6, Math.ceil((weight + 35) / 12.5));\n\n// Cargo Category Classification\nlet cargoCategory = \"STANDARD_ODC\";\nif (weight > 100) {\n  cargoCategory = \"HEAVY_LIFT_SUPER_LOAD\";\n} else if (width > 4.0 || height > 5.0) {\n  cargoCategory = \"WIDE_OVERHEAD_CRITICAL\";\n}\n\nreturn [{\n  json: {\n    origin_query: origin,\n    destination_query: destination,\n    cargo_weight_mt: weight,\n    cargo_height_m: height,\n    cargo_width_m: width,\n    cargo_length_m: length,\n    axle_count: axles,\n    cargo_category: cargoCategory,\n    allow_bypasses: true,\n    client_id: raw.client_id || \"SEALAND_INGESTION_SENSOR\",\n    survey_id: raw.survey_id || (\"SURVEY-N8N-\" + Date.now().toString(36).toUpperCase())\n  }\n}];"
+      },
+      "id": "node-heuristic-classifier",
+      "name": "Deterministic Heuristic Classifier",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [440, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://windmill-app-1:8000/api/w/demo/scripts/u/f/sealand_OOG/inexpensive_script/run",
+        "authentication": "none",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json) }}",
+        "options": {
+          "timeout": 15000
+        }
+      },
+      "id": "node-call-windmill",
+      "name": "Dispatch to Windmill RAL Solver",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [660, 300]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({\n  event: \"OOG_SURVEY_PROCESSED\",\n  status: $json.status || \"APPROVED_AUTO_PERMIT\",\n  survey_id: $json.survey_id,\n  route: $json.route_summary,\n  risk_score: $json.risk_score,\n  statutory_fees_inr: $json.compliance_matrix ? $json.compliance_matrix.total_statutory_fee_inr : 0,\n  permits: $json.compliance_matrix ? $json.compliance_matrix.permits_checklist : []\n}) }}",
+        "options": {}
+      },
+      "id": "node-respond-webhook",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [880, 300]
+    }
+  ],
+  "connections": {
+    "Webhook Inbound Survey Request": {
+      "main": [
+        [
+          {
+            "node": "Deterministic Heuristic Classifier",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Deterministic Heuristic Classifier": {
+      "main": [
+        [
+          {
+            "node": "Dispatch to Windmill RAL Solver",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Dispatch to Windmill RAL Solver": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

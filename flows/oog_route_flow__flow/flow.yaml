@@ -1,0 +1,217 @@
+summary: Sealand OOG Route Survey and Permit DAG
+description: Enterprise Out-of-Gauge (OOG) and Over-Dimensional Cargo (ODC) heavy haulage route feasibility and regulatory permit solver. Prunes spatial highway graphs by physical bridge limits, evaluates multi-state transit tax and escort mandates, computes deterministic risk scores, and routes clearance passes to n8n.
+value:
+  modules:
+    - id: prune_route
+      summary: Step 1 - Spatial Highway Graph Pruning & Feasible Path Solver
+      value:
+        type: script
+        path: f/sealand_OOG/prune_route_graph
+        input_transforms:
+          origin_query:
+            type: javascript
+            expr: flow_input.origin_query
+          destination_query:
+            type: javascript
+            expr: flow_input.destination_query
+          cargo_weight_mt:
+            type: javascript
+            expr: flow_input.cargo_weight_mt
+          cargo_height_m:
+            type: javascript
+            expr: flow_input.cargo_height_m
+          cargo_width_m:
+            type: javascript
+            expr: flow_input.cargo_width_m
+          cargo_length_m:
+            type: javascript
+            expr: flow_input.cargo_length_m
+          axle_count:
+            type: javascript
+            expr: flow_input.axle_count
+          allow_bypasses:
+            type: javascript
+            expr: flow_input.allow_bypasses
+    - id: evaluate_compliance
+      summary: Step 2 - MoRTH & State RTO Permit and Statutory Fee Matrix
+      value:
+        type: script
+        path: f/sealand_OOG/evaluate_permits_and_tax
+        input_transforms:
+          traversed_states:
+            type: javascript
+            expr: results.prune_route.route_summary.traversed_states
+          total_distance_km:
+            type: javascript
+            expr: results.prune_route.route_summary.total_distance_km
+          cargo_weight_mt:
+            type: javascript
+            expr: flow_input.cargo_weight_mt
+          cargo_width_m:
+            type: javascript
+            expr: flow_input.cargo_width_m
+          cargo_height_m:
+            type: javascript
+            expr: flow_input.cargo_height_m
+          cargo_length_m:
+            type: javascript
+            expr: flow_input.cargo_length_m
+    - id: calculate_risk
+      summary: Step 3 - Algorithmic OOG Risk Scoring (0 to 100)
+      value:
+        type: script
+        path: f/sealand_OOG/calculate_oog_risk_score
+        input_transforms:
+          cargo_weight_mt:
+            type: javascript
+            expr: flow_input.cargo_weight_mt
+          cargo_height_m:
+            type: javascript
+            expr: flow_input.cargo_height_m
+          cargo_width_m:
+            type: javascript
+            expr: flow_input.cargo_width_m
+          cargo_length_m:
+            type: javascript
+            expr: flow_input.cargo_length_m
+          axle_info:
+            type: javascript
+            expr: results.prune_route.axle_analysis
+          route_info:
+            type: javascript
+            expr: results.prune_route.route_summary
+          bypasses_applied:
+            type: javascript
+            expr: results.prune_route.bypasses_applied
+          compliance_info:
+            type: javascript
+            expr: results.evaluate_compliance
+    - id: finalize_decision
+      summary: Step 4 - Finalize Route Clearance Pass & Audit Trail
+      value:
+        type: script
+        path: f/sealand_OOG/finalize_oog_decision
+        input_transforms:
+          survey_id:
+            type: javascript
+            expr: flow_input.survey_id
+          client_id:
+            type: javascript
+            expr: flow_input.client_id
+          risk_data:
+            type: javascript
+            expr: results.calculate_risk
+          route_data:
+            type: javascript
+            expr: results.prune_route.route_summary
+          compliance_data:
+            type: javascript
+            expr: results.evaluate_compliance
+          dispatcher_override:
+            type: javascript
+            expr: flow_input.dispatcher_override
+          dispatcher_name:
+            type: javascript
+            expr: flow_input.dispatcher_name
+          engineering_waiver_reason:
+            type: javascript
+            expr: flow_input.engineering_waiver_reason
+          db:
+            type: static
+            value: $res:f/sealand_OOG/sealand_oog_db
+    - id: trigger_n8n
+      summary: Step 5 - Dispatch Notification to n8n Webhook
+      value:
+        type: script
+        path: f/sealand_OOG/trigger_n8n_oog_executor
+        input_transforms:
+          survey_id:
+            type: javascript
+            expr: results.finalize_decision.survey_id
+          status:
+            type: javascript
+            expr: results.finalize_decision.final_status
+          risk_score:
+            type: javascript
+            expr: results.finalize_decision.risk_score
+          clearance_pass_code:
+            type: javascript
+            expr: results.finalize_decision.clearance_pass_code
+          total_distance_km:
+            type: javascript
+            expr: results.finalize_decision.total_distance_km
+          total_statutory_fee_inr:
+            type: javascript
+            expr: results.finalize_decision.total_statutory_fee_inr
+          client_id:
+            type: javascript
+            expr: flow_input.client_id
+schema:
+  $schema: https://json-schema.org/draft/2020-12/schema
+  type: object
+  order:
+    - origin_query
+    - destination_query
+    - cargo_weight_mt
+    - cargo_height_m
+    - cargo_width_m
+    - cargo_length_m
+    - axle_count
+    - allow_bypasses
+    - dispatcher_override
+    - dispatcher_name
+    - engineering_waiver_reason
+    - client_id
+    - survey_id
+  properties:
+    origin_query:
+      type: string
+      default: "Visakhapatnam Port"
+      description: Origin port, terminal, or city
+    destination_query:
+      type: string
+      default: "Raipur Logistics Hub"
+      description: Destination plant, hub, or project site
+    cargo_weight_mt:
+      type: number
+      default: 85.0
+      description: Net cargo weight (MT)
+    cargo_height_m:
+      type: number
+      default: 5.1
+      description: Consignment height (m)
+    cargo_width_m:
+      type: number
+      default: 4.2
+      description: Consignment width (m)
+    cargo_length_m:
+      type: number
+      default: 24.5
+      description: Consignment length (m)
+    axle_count:
+      type: integer
+      default: 10
+      description: Number of hydraulic axle lines
+    allow_bypasses:
+      type: boolean
+      default: true
+      description: Permit structural bridge detours
+    dispatcher_override:
+      type: boolean
+      default: false
+      description: Manual engineering waiver toggle
+    dispatcher_name:
+      type: string
+      default: "Senior Route Surveyor"
+      description: Dispatcher / surveyor approving waiver
+    engineering_waiver_reason:
+      type: string
+      default: ""
+      description: Formal reason for engineering waiver
+    client_id:
+      type: string
+      default: "SEALAND_PROJECT_CARGO_DIV"
+    survey_id:
+      type: string
+      default: ""
+  required: []

@@ -1,0 +1,35 @@
+summary: Finalize OOG Clearance Decision & Pass
+description: Issues digital clearance certificate, logs human dispatcher waivers, and generates compliance dispatch records.
+kind: script
+schema:
+  $schema: https://json-schema.org/draft/2020-12/schema
+  type: object
+  properties:
+    survey_id:
+      type: string
+      default: ""
+    client_id:
+      type: string
+      default: "SEALAND_PROJECT_CARGO_DIV"
+    risk_data:
+      type: object
+      default: null
+    route_data:
+      type: object
+      default: null
+    compliance_data:
+      type: object
+      default: null
+    dispatcher_override:
+      type: boolean
+      default: false
+    dispatcher_name:
+      type: string
+      default: "Chief Route Surveyor"
+    engineering_waiver_reason:
+      type: string
+      default: ""
+    db:
+      type: object
+      default: null
+  required: []

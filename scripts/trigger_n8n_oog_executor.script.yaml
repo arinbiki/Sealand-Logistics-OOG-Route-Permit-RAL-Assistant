@@ -1,0 +1,35 @@
+summary: Trigger n8n Notification & Permit Filing Executor
+description: Dispatches completion webhook to n8n to send client clearance passes and trigger automated RTO portal filing.
+kind: script
+schema:
+  $schema: https://json-schema.org/draft/2020-12/schema
+  type: object
+  properties:
+    survey_id:
+      type: string
+      default: "SURVEY-2026-SEAL-8891"
+    status:
+      type: string
+      default: "APPROVED_AUTO_PERMIT"
+    risk_score:
+      type: integer
+      default: 45
+    clearance_pass_code:
+      type: string
+      default: "SEAL-ODC-20261104-CLEAR"
+    total_distance_km:
+      type: number
+      default: 730.0
+    total_statutory_fee_inr:
+      type: number
+      default: 48500.0
+    client_id:
+      type: string
+      default: "SEALAND_PROJECT_CARGO_DIV"
+    n8n_webhook_url:
+      type: string
+      default: "https://ubuntu.arindam818.cloud/webhook/oog-permit-notification"
+    n8n_token:
+      type: string
+      default: ""
+  required: []

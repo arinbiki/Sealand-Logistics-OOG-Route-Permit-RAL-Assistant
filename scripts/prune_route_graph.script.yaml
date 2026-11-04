@@ -1,0 +1,32 @@
+summary: Prune Highway Graph by Physical Constraints
+description: Prunes road network edges based on bridge load limits, vertical clearances, and hairpin geometry, returning the optimal bypass corridor.
+kind: script
+schema:
+  $schema: https://json-schema.org/draft/2020-12/schema
+  type: object
+  properties:
+    origin_query:
+      type: string
+      default: "Visakhapatnam Port"
+    destination_query:
+      type: string
+      default: "Raipur Logistics Hub"
+    cargo_weight_mt:
+      type: number
+      default: 85.0
+    cargo_height_m:
+      type: number
+      default: 5.1
+    cargo_width_m:
+      type: number
+      default: 4.2
+    cargo_length_m:
+      type: number
+      default: 24.5
+    axle_count:
+      type: integer
+      default: 10
+    allow_bypasses:
+      type: boolean
+      default: true
+  required: []

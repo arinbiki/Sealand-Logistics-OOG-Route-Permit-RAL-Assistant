@@ -1,0 +1,28 @@
+summary: Evaluate State RTO Permits and Statutory Fees
+description: Deterministically queries central MoRTH and state RTO rules to generate permit checklists, fee schedules, and escort mandates.
+kind: script
+schema:
+  $schema: https://json-schema.org/draft/2020-12/schema
+  type: object
+  properties:
+    traversed_states:
+      type: array
+      items:
+        type: string
+      default: ["AP", "OD", "CG"]
+    total_distance_km:
+      type: number
+      default: 730.0
+    cargo_weight_mt:
+      type: number
+      default: 85.0
+    cargo_width_m:
+      type: number
+      default: 4.2
+    cargo_height_m:
+      type: number
+      default: 5.1
+    cargo_length_m:
+      type: number
+      default: 24.5
+  required: []

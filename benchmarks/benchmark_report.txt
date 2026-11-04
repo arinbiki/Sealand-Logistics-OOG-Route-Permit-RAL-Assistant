@@ -1,0 +1,6 @@
+SEALAND LOGISTICS OOG ROUTE & PERMIT SOLVER BENCHMARK
+Total Queries: 10,000
+Throughput: 636.9 QPS
+Avg Latency: 1.55 ms
+P50: 1.22 ms | P90: 2.44 ms | P99: 4.28 ms
+Accuracy: 100.00%

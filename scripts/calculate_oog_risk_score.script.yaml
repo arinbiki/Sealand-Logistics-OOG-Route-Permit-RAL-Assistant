@@ -1,0 +1,32 @@
+summary: Algorithmic OOG Risk Scoring
+description: Evaluates composite risk score between 0 and 100 based on bridge bottlenecks, axle loading, ghat sections, and escort mandates.
+kind: script
+schema:
+  $schema: https://json-schema.org/draft/2020-12/schema
+  type: object
+  properties:
+    cargo_weight_mt:
+      type: number
+      default: 85.0
+    cargo_height_m:
+      type: number
+      default: 5.1
+    cargo_width_m:
+      type: number
+      default: 4.2
+    cargo_length_m:
+      type: number
+      default: 24.5
+    axle_info:
+      type: object
+      default: null
+    route_info:
+      type: object
+      default: null
+    bypasses_applied:
+      type: array
+      default: []
+    compliance_info:
+      type: object
+      default: null
+  required: []
